@@ -56,7 +56,6 @@ task buildReact(type: Exec) {
 	dependsOn "installReact"
 	workingDir "$reactAppDir"
 	inputs.dir "$reactAppDir"
-    outputs.dir "$reactAppDir/build"
 	group = BasePlugin.BUILD_GROUP
 	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
 		commandLine "npm.cmd", "run-script", "build"
@@ -68,13 +67,12 @@ task buildReact(type: Exec) {
 task installReact(type: Exec) {
 	workingDir "$reactAppDir"
 	inputs.dir "$reactAppDir"
-    outputs.dir "$reactAppDir/node_modules"
 	group = BasePlugin.BUILD_GROUP
 	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
-		
+		commandLine "npm.cmd", "audit", "fix"
 		commandLine "npm.cmd", "install"
 	} else {
-		
+		commandLine "npm", "audit", "fix"
 		commandLine "npm", "install"
 	}
 }
