@@ -39,6 +39,8 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+tasks.parallel = true
+
 def reactAppDir = "${projectDir}/src/main/webapp"
 
 processResources{
