@@ -17,7 +17,6 @@ import CheckMyCar from './components/profile/CheckMyCar';
 import RegisterMain from './components/register/RegisterMain';
 import {Provider} from 'react-redux';
 import store from './store/store';
-import Payment_main from './components/payment/Payment_main';
 import DriverLicense from './components/register/driverLicense/DriverLicense';
 import DriverCheck from './components/register/driverLicense/DriverCheck';
 import MyWishList from "./components/MyWishList";
@@ -27,10 +26,8 @@ import BookingDetails from "./components/profile/BookingDetails";
 import MyRating from "./components/profile/MyRating";
 import {Details} from "@mui/icons-material";
 import KakaoLogin from './components/login/KakaoLogin';
-import {TossModal} from './components/payment/tosspayment/TossModal';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import {SuccessPayment} from './components/payment/tosspayment/SuccessPayment';
-import {FailPayment} from './components/payment/tosspayment/FailPayment';
+
 
 function Detail() {
   return null;
