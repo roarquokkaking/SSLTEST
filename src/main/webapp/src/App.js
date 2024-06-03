@@ -77,10 +77,10 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/choice" element={<Choice />} />
 
-            <Route path='/payment' element={<Payment_main />} />
+            {/* <Route path='/payment' element={<Payment_main />} />
             <Route path='/TossModal' element={<TossModal/>} />
             <Route path='/success' element={<SuccessPayment />} />
-            <Route path='/fail' element={<FailPayment />} />
+            <Route path='/fail' element={<FailPayment />} /> */}
           </Routes>
           </Provider>
         </Box>
