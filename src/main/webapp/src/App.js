@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios';
 function App() {
+
+  axios.get('https://dongwoossltest.shop/api/test')
+          .then(res=>
+            alert(res.data))
+
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -15,6 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          
           Learn React
         </a>
       </header>
