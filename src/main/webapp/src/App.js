@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+import Test1 from './Test1';
 function App() {
 
-  axios.get('http://dongwoossltest.shop/api/')
-          .then(res=>
-            alert(res.data))
+  
+  
 
   
   return (
@@ -15,6 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Test1/>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -25,6 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
+      
     </div>
   );
 }
