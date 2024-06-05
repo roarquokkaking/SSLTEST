@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 function App() {
 
-  axios.get('https://dongwoossltest.shop/api/test')
+  axios.get('http://dongwoossltest.shop/api/')
           .then(res=>
             alert(res.data))
 
