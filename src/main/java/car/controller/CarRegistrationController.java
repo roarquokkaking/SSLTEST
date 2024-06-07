@@ -23,23 +23,13 @@ public class CarRegistrationController {
     private List<String> carImagesUUID = new ArrayList<>();
 
     @PostMapping(path = "/cars")
-    public ResponseEntity<Car> createCar(@RequestPart("car") Car car,
-                                         @RequestPart("images") List<MultipartFile> images) {
+    public String createCar() {
         System.out.println("CarController start");
-        Car savedCar = carRegistrationService.saveCar(car);     // 자동차 저장
-        CarImages carImages = new CarImages();
-        carImages.setCar(savedCar);                             // Car 엔티티를 연결
-
-        for(MultipartFile image: images){
-            String uploadFileName = objectStorageService.uploadFile("cars/" + savedCar.getCarId() + "/", image);
-            carImagesUUID.add(uploadFileName);
-            System.out.println("uploadFileName = " + uploadFileName);
-        }
-
-        // car images uuid 값들을 저장
-        carRegistrationService.saveCarImages(carImages, carImagesUUID);
-        return ResponseEntity.ok(savedCar);
+        
+        return "asd";
     }
+
+    
 
 
 }
